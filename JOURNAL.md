@@ -22,7 +22,23 @@ At this point in the project after all the research I had done I decided to just
 
 I started by putting together the buck converter and the ldo. These two components I have had lots of problems with in the past. So usually when I use them it ends up with the magic smoke being released from the devices and unfortunately you can't put that back in the component so I have often opted to just use a physical device that will give a stable 5v output and isolate the higher voltage, but this time I am pulling all the stops and found a popular buck converter that is specifically made with 12V and 24V in mind and following the schematic and reccomended component layout to a tee. Unfortunately for the LDO there is only a reccomended schematic so I followed that and I will have to figure out and get advice for the LDO part.
 
+After this I threw up a bunch of screw terminals and immideately realized that the esp32 does not have enough pins for the optocouplers and 6 motors as each motor requires 3 pins to the motors PUL+ DIR+ and ENA+, ENA+ is slightly debatable because it could just be used for a software stop by pulling high, but if I really need to I can just cut power to the board, but if its an option might as well have it. So the only option rather than decide on a new microcontroller I just threw some shift registers on there and called it a day. I found that some shift registers I have used in the past will not work because it is recommended to use a specific one for this application. I don't remember the exact reason off the top of my head, but I think it was something about the communication being spi rather than i2c.
+
+Then I threw together the optocouplers which I could not find any schematic advice or anything for so I found some other projects that used it, checked their use case and its implementation and then used their configuration and it should work for my use case as well.
+
 PCB
+
+I started routing the the buck converter according to the reccomended layout and I realized a bit late that two of the components had to be 1206 rather than the 0805 that I used so I had to redo the layout which was totally very fun. The LDO I kind of winged where I just routed overly large traces and added a bunch of ground vias, but from similar layouts for them that I have seen it should work.
+
+Then I placed the rest of the footprints in the layout and organized them to the layout worked best and ajusted what gpios I would use. I had the screw terminals for the motors on one end, screw terminals for the optocouplers on the adjacent edge with the sd card and the power management on the top edge, with the esp32 on the left edge
+
+With that done the rest of the wiring was simple, the only fancy-ish thing I added was decently large traces for the 5V and 3.3V.
+
+Code
+
+Code I will say is not my strongest suit, but I made a simple program that controls the motors. I started by using accelmotor which is a library that is used for controlling stepper motors through arduino ide. Unfortunately that does not work when using shift registers so I had to program it to work natively. With some research of the docs I found how to use the spi on the shift registers to then control the motors with the DIR+ and PUL+ pins. Then I just have it move backwards for a second and forwards for a second to test the motors.
+
+The shift registers were extra interesting because three of them are daisy chained, and so I have to check which shift register the code connects to and then sends the proper output to the pin 1-7. The rest is pretty basic though for the main loop.
 
 CAD
 
