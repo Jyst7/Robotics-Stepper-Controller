@@ -1,6 +1,6 @@
 Background
 
-The reason I decided to make this project was because I had 3 stepper motors lying around specifically the Keling Technology, Inc Hybrid Stepper Motor Type:KL23H276-30-4A. I would like to be able to use them and I recently got a power supply. I didn't really have any large constrainst for this project but I knew that I wanted to have the ability to add more motors later on as well as other peripherals that I might use in the future. I also wanted to under the guise of this project to make some simple cycloidal drives for the motors and see the extent of their strength. I later in the process decided it might be nice to attempt to turn this into a robotic arm because I find them cool, which in my opionion is a great reason. Also all parts should be purchased from Aliexpress, Lcsc, and Jlcpcb. I somehow forgot about the biggest constraint of all which is money, the goal is to keep it under $120 but if absolutely necessary could be stretched to $180 as I am making this for hackclub's outpost ysws.
+The reason I decided to make this project was for two reasons, the first being I wanted to justify procrastinating studying for exams and I'd feel bad if I was just doomscrolling and the second is because I had 3 stepper motors lying around specifically the Keling Technology, Inc Hybrid Stepper Motor Type:KL23H276-30-4A. I would like to be able to use them and I recently got a power supply. I didn't really have any large constrainst for this project but I knew that I wanted to have the ability to add more motors later on as well as other peripherals that I might use in the future. I also wanted to under the guise of this project to make some simple cycloidal drives for the motors and see the extent of their strength. I later in the process decided it might be nice to attempt to turn this into a robotic arm because I find them cool, which in my opionion is a great reason. Also all parts should be purchased from Aliexpress, Lcsc, and Jlcpcb. I somehow forgot about the biggest constraint of all which is money, the goal is to keep it under $120 but if absolutely necessary could be stretched to $180 as I am making this for hackclub's outpost ysws.
 
 Research
 
@@ -14,9 +14,11 @@ Thinking about my 3d printer I decided an sd card is good to have because you ne
 
 I also wanted some optocouplers because I had seen them on some other boards and the purpose of them seems quite useful. They should mostly be electrically isolated from the rest of the board other than the 5v power which is fine so if something goes wrong and dumps a ton of voltage or current the optocoupler breaks or the 5v converter breaks and not the rest of the board. Thus allowing for safe addition of other inputs such as limit switches to not crash an axis if I'm doing something that has an axis, or probing a point in space.
 
+For the power situation I decided to underpower my motors a bit because my psu can safely go up to 32V which is I believe the reccomended amound for nema 23 motors I didn't really want to go near the top range of my PSU's capabilities so I thought 24V would work fine they just wouldn't be as powerful as they could be. This also made powering the pcb slightly easier as I already had a buck converter in mind. So I would take the 24V from the psu and buck it down to 5V which can power some things that are fine with a bit of noise and then I could use an LDO to get a clean 3.3v to the SD card and the esp32 which don't like a lot of noise.
+
 Schematic
 
-
+At this point in the project after all the research I had done I decided to just start doing the schematic. The first thing that I did was set up easyeda2kicad which is my savior for any kicad project because 90% of the lcsc parts I use have an easyeda footprint and schematic that can be ported over to kicad and it saves so much time that would be spent just making the symbols and footprints that 90% of the time I mess up when I make them custom. I threw in my parts starting with the esp32, the sd card, buck converter and ldo.
 
 PCB
 
