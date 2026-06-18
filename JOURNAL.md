@@ -20,6 +20,8 @@ Schematic
 
 At this point in the project after all the research I had done I decided to just start doing the schematic. The first thing that I did was set up easyeda2kicad which is my savior for any kicad project because 90% of the lcsc parts I use have an easyeda footprint and schematic that can be ported over to kicad and it saves so much time that would be spent just making the symbols and footprints that 90% of the time I mess up when I make them custom. I threw in my parts starting with the esp32, the sd card, buck converter and ldo.
 
+I started by putting together the buck converter and the ldo. These two components I have had lots of problems with in the past. So usually when I use them it ends up with the magic smoke being released from the devices and unfortunately you can't put that back in the component so I have often opted to just use a physical device that will give a stable 5v output and isolate the higher voltage, but this time I am pulling all the stops and found a popular buck converter that is specifically made with 12V and 24V in mind and following the schematic and reccomended component layout to a tee. Unfortunately for the LDO there is only a reccomended schematic so I followed that and I will have to figure out and get advice for the LDO part.
+
 PCB
 
 CAD
