@@ -44,6 +44,10 @@ The shift registers were extra interesting because three of them are daisy chain
 
 For the cad I had to start with making the motor itself because as I mentioned prior the motor is a different size compared to a regular nema 23. With my trusty old calipers I started to measure the motor and realized I had lost the battery cover so one quick makerworld search and print later I have working calipers. The measurements are kinda weird but I get it modelled. Naturally right after I measure it I remember about the site that has all the measurments for the motor and I didn't need to do it.
 
+I then started by making a faceplate for the motor that will have a friction fit around the raised circle on the top and screws can go through to figure out the profile and have a surface for the rest of the cycloidal gearbox. I added some empty spaces around the main circle to allow for some flex to have a tighter fit. On my second iteration I got it to fit quite snugly without having too much of a struggle to put it on as well as the screws fit nicely self tapping into the plasitc.
+
+For the next section I realized I didnt have a ton of filament left so I opted for not a huge reducer where the cyloid would be slightly less in diameter than the distance between screws on the motor.
+
 ## Checking
 
 ## Future
