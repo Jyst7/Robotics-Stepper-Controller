@@ -1,0 +1,20 @@
+Untitled,,,,,,,,,
+Reference,Qty,Value,DNP,Exclude from BOM,Exclude from Board,Footprint,Datasheet,LCSC Part,Price
+"U14,U18",2,DB125-3.5-8P-GN-S,,,,easyeda2kicad:CONN-TH_8P-P3.50_DORABO_DB125-3.5-8P-GN-S,https://www.lcsc.com/datasheet/C5184954.pdf,C5184954,$1.30
+"U12,U16,U20",5,74AHCT595T16-13,,,,easyeda2kicad:TSSOP-16_L5.0-W4.4-P0.65-LS6.4-BL,https://lcsc.com/product-detail/presales_Diodes-Incorporated-74AHCT595T16-13_C460504.html,C460504,$1.32
+"U10,U11,U13,U15,U17,U19,U21,U22",10,TLP521GB-S_C20612587,,,,easyeda2kicad:SMD-4_L6.5-W4.6-P2.54-LS10.2-BL,https://www.lcsc.com/datasheet/C20612587.pdf,C20612587,$1.10
+U8,1,AP63205WU-7,,,,easyeda2kicad:TSOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL,https://www.lcsc.com/datasheet/C2071056.pdf,C2071056,$0.44
+U7,5,ESP32-S3-DevKitC(PIN HEADERS),,,,PCM_Espressif:ESP32-S3-DevKitC,https://www.lcsc.com/datasheet/C7499337.pdf,C7499337,$0.93
+"U1,U2,U3,U4,U5,U6",10,DB125-3.5-4P-GN,,,,easyeda2kicad:CONN-TH_DB125-3.5-4P-GN,https://www.lcsc.com/datasheet/C2757925.pdf,C2757925,$3.37
+"R3,R6,R9,R12,R15,R18,R21,R24",20,10K,,,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,https://www.lcsc.com/datasheet/C110775.pdf,C110775,$0.78
+"R2,R5,R8,R11,R14,R17,R20,R23",20,1K,,,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,https://www.lcsc.com/datasheet/C110774.pdf,C110774,$0.79
+"R1,R4,R7,R10,R13,R16,R19,R22",10,300Ω,,,,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,https://www.lcsc.com/datasheet/C7603206.pdf,C7603206,$3.45
+Q1,1,XC6220B331MR-G,,,,easyeda2kicad:SOT-25_L3.0-W1.6-P0.95-LS2.8-TL,https://lcsc.com/product-detail/Low-Dropout-Regulators-LDO_XC6220B331MR-G_C86534.html,C86534,$0.45
+L1,10,4.7μH,,,,easyeda2kicad:IND-SMD_L5.0-W5.0,https://www.lcsc.com/datasheet/C520348.pdf,C520348,$0.56
+Card1,10,TF PUSH,,,,easyeda2kicad:TF-SMD_TF-PUSH,https://lcsc.com/product-detail/Connector-Card-Sockets_SHOU-HAN-SHOU-HAN-TFDeck-TF-Deck_C393941.html,C393941,$1.26
+"C1,C7,C8,C85",50,0.1 μF,,,,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,https://www.lcsc.com/datasheet/C49678.pdf,C49678,$1.34
+C7,50,100nF,,,,Capacitor_SMD:C_1206_3216Metric,https://www.lcsc.com/datasheet/C309030.pdf,C309030,$1.28
+C6,10,4.7μF,,,,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,https://www.lcsc.com/datasheet/C33546011.pdf,C33546011,$0.78
+"C4,C5",10,22μF,,,,Capacitor_SMD:C_1206_3216Metric,https://www.lcsc.com/datasheet/C342620.pdf,C342620,$3.61
+"C2,C3",20,10μF,,,,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,https://www.lcsc.com/datasheet/C1713.pdf,C1713,$0.98
+Total,,,,,,,,,$23.74
