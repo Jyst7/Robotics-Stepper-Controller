@@ -1,6 +1,10 @@
 # Robotics-Stepper-Controller
 
-<img width="479" height="614" alt="split-nema23-actuator" src="https://github.com/user-attachments/assets/d792b377-5ac9-4271-be19-95c81a295112" />
+<img width="792" height="702" alt="Screenshot 2026-06-22 at 3 19 54 PM" src="https://github.com/user-attachments/assets/c8537fee-f149-4d62-8564-6a7ae667bc13" />
+
+
+<img width="676" height="609" alt="Screenshot 2026-06-22 at 3 20 07 PM" src="https://github.com/user-attachments/assets/a0b6b43b-ef8a-45ef-affb-1f2eacef4358" />
+
 
 This project is a motor controller board and a cycloidal gearbox. It is designed around the esp32 s3 and can handle up to 6 nema 23's using dm542's.
 
