@@ -1,7 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "easyeda2kicad.3dshapes")(type "KiCad")(uri "/Users/jaysonsone/Desktop/ActualProjects/Nema23/lcsc/lib/lcsc/easyeda2kicad.3dshapes")(options "")(descr ""))
-  (lib (name "espressif.3dshapes")(type "KiCad")(uri "/Users/jaysonsone/Desktop/ActualProjects/Nema23/Assets/espressif-kicad-addon/3dmodels/espressif.3dshapes")(options "")(descr ""))
-  (lib (name "Espressif")(type "KiCad")(uri "/Users/jaysonsone/Desktop/ActualProjects/Nema23/Assets/espressif-kicad-addon/footprints/Espressif.pretty")(options "")(descr ""))
-  (lib (name "easyeda2kicad")(type "KiCad")(uri "/Users/jaysonsone/Desktop/ActualProjects/Nema23/lcsc/lib/lcsc/easyeda2kicad.pretty")(options "")(descr ""))
-)
