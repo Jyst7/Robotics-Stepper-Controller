@@ -1,7 +1,10 @@
 # Robotics-Stepper-Controller
 
-<img width="792" height="702" alt="Screenshot 2026-06-22 at 3 19 54 PM" src="https://github.com/user-attachments/assets/c8537fee-f149-4d62-8564-6a7ae667bc13" />
+<img width="736" height="644" alt="Screenshot 2026-06-23 at 11 46 33 PM" src="https://github.com/user-attachments/assets/57c0360b-d259-4051-b57e-104e7be71855" />
 
+<img width="419" height="561" alt="Screenshot 2026-06-23 at 11 47 46 PM" src="https://github.com/user-attachments/assets/8df7dc5c-3a9e-4726-aab0-5fd0f42a8f22" />
+
+<img width="478" height="351" alt="Screenshot 2026-06-23 at 11 48 07 PM" src="https://github.com/user-attachments/assets/b97dd198-d92f-4f2b-94d6-72c9ac0fd7dc" />
 
 <img width="676" height="609" alt="Screenshot 2026-06-22 at 3 20 07 PM" src="https://github.com/user-attachments/assets/a0b6b43b-ef8a-45ef-affb-1f2eacef4358" />
 
