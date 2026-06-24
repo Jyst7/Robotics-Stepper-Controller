@@ -6,8 +6,7 @@
 
 <img width="478" height="351" alt="Screenshot 2026-06-23 at 11 48 07 PM" src="https://github.com/user-attachments/assets/b97dd198-d92f-4f2b-94d6-72c9ac0fd7dc" />
 
-<img width="676" height="609" alt="Screenshot 2026-06-22 at 3 20 07 PM" src="https://github.com/user-attachments/assets/a0b6b43b-ef8a-45ef-affb-1f2eacef4358" />
-
+<img width="645" height="607" alt="Screenshot 2026-06-23 at 11 48 39 PM" src="https://github.com/user-attachments/assets/0d2805b0-e276-4be3-8ebf-6ebbf7827aac" />
 
 This project is a motor controller board and a cycloidal gearbox. It is designed around the esp32 s3 and can handle up to 6 nema 23's using dm542's.
 
