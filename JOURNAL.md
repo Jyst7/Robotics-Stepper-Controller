@@ -2,9 +2,13 @@
 
 The reason I decided to make this project was for two reasons, the first being I wanted to justify procrastinating studying for exams and I'd feel bad if I was just doomscrolling and the second is because I had 3 stepper motors lying around specifically the Keling Technology, Inc Hybrid Stepper Motor Type:KL23H276-30-4A. I would like to be able to use them and I recently got a power supply. I didn't really have any large constrainst for this project but I knew that I wanted to have the ability to add more motors later on as well as other peripherals that I might use in the future. I also wanted to under the guise of this project to make some simple cycloidal drives for the motors and see the extent of their strength. I later in the process decided it might be nice to attempt to turn this into a robotic arm because I find them cool, which in my opionion is a great reason. Also all parts should be purchased from Aliexpress, Lcsc, and Jlcpcb. I somehow forgot about the biggest constraint of all which is money, the goal is to keep it under $120 but if absolutely necessary could be stretched to $180 as I am making this for hackclub's outpost ysws.
 
+![motor info](Images/motor%20info.png)
+
 ## Research - 3 Hours
 
 The first thing I wanted to reasearch was the motor drivers I was going to use. I took a look at aliexpress just searching up stepper motor drivers and saw three different options which went down to two when I realized for this big motor it probably needs a decently large stepper driver for the heat and other things. So I threw all the data about the motors into google and apparently it is quite close to being a nema 23 motor which I found slightly weird based on the size differences, but google probably knows better than me because its twice the size of a nema 17. So the two motor drivers I decided between was the TB6600 and the DM542. It was not very difficult to decide between the two as almost every source online unanimously says the DM542 is better.
+
+![motor driver](/Images/dm542.png)
 
 I also took a look at many other different cnc controllers as I made the assumption that the board I am making is just a cnc controller without the logic and circuits for the spindle motor. I also was able to look at the controller boards for the large cnc machine and the small one that is in the shop at my school and other than the integrated psu and spindle motor stuff I had a good idea of what I needed to make to the board.
 
@@ -18,6 +22,9 @@ For the power situation I decided to underpower my motors a bit because my psu c
 
 ## Schematic - 4 Hours
 
+![schematic](Images/schematic-1.png)
+![schematic](Images/schematic-2.png)
+
 At this point in the project after all the research I had done I decided to just start doing the schematic. The first thing that I did was set up easyeda2kicad which is my savior for any kicad project because 90% of the lcsc parts I use have an easyeda footprint and schematic that can be ported over to kicad and it saves so much time that would be spent just making the symbols and footprints that 90% of the time I mess up when I make them custom. I threw in my parts starting with the esp32, the sd card, buck converter and ldo.
 
 I started by putting together the buck converter and the ldo. These two components I have had lots of problems with in the past. So usually when I use them it ends up with the magic smoke being released from the devices and unfortunately you can't put that back in the component so I have often opted to just use a physical device that will give a stable 5v output and isolate the higher voltage, but this time I am pulling all the stops and found a popular buck converter that is specifically made with 12V and 24V in mind and following the schematic and reccomended component layout to a tee. Unfortunately for the LDO there is only a reccomended schematic so I followed that and I will have to figure out and get advice for the LDO part.
@@ -28,6 +35,8 @@ Then I threw together the optocouplers which I could not find any schematic advi
 
 ## PCB - 2 Hours
 
+<img width="736" height="644" alt="Screenshot 2026-06-23 at 11 46 33 PM" src="https://github.com/user-attachments/assets/57c0360b-d259-4051-b57e-104e7be71855" />
+
 I started routing the the buck converter according to the reccomended layout and I realized a bit late that two of the components had to be 1206 rather than the 0805 that I used so I had to redo the layout which was totally very fun. The LDO I kind of winged where I just routed overly large traces and added a bunch of ground vias, but from similar layouts for them that I have seen it should work.
 
 Then I placed the rest of the footprints in the layout and organized them to the layout worked best and ajusted what gpios I would use. I had the screw terminals for the motors on one end, screw terminals for the optocouplers on the adjacent edge with the sd card and the power management on the top edge, with the esp32 on the left edge
@@ -36,11 +45,15 @@ With that done the rest of the wiring was simple, the only fancy-ish thing I add
 
 ## Code - 1.5 Hours
 
+![code](Images/code.png)
+
 Code I will say is not my strongest suit, but I made a simple program that controls the motors. I started by using accelmotor which is a library that is used for controlling stepper motors through arduino ide. Unfortunately that does not work when using shift registers so I had to program it to work natively. With some research of the docs I found how to use the spi on the shift registers to then control the motors with the DIR+ and PUL+ pins. Then I just have it move backwards for a second and forwards for a second to test the motors.
 
 The shift registers were extra interesting because three of them are daisy chained, and so I have to check which shift register the code connects to and then sends the proper output to the pin 1-7. The rest is pretty basic though for the main loop.
 
 ## CAD - 4 Hours
+
+![actuator](Images/split-actuator.png)
 
 For the cad I had to start with making the motor itself because as I mentioned prior the motor is a different size compared to a regular nema 23. With my trusty old calipers I started to measure the motor and realized I had lost the battery cover so one quick makerworld search and print later I have working calipers. The measurements are kinda weird but I get it modelled. Naturally right after I measure it I remember about the site that has all the measurments for the motor and I didn't need to do it.
 
